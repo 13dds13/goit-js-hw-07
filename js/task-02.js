@@ -7,8 +7,6 @@ const ingredients = [
   'Приправы',
 ];
 
-
-
 const ingredientsAdd = arr => arr.map(item => {
   const newLi = document.createElement('li');
   newLi.textContent = item;

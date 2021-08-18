@@ -1,5 +1,4 @@
 const mainListRef = document.querySelector('#categories');
-// console.log(mainListRef);
 
 const liItemRef = mainListRef.querySelectorAll('li.item');
 
@@ -18,9 +17,7 @@ const msg = arg => {
 
 console.log(msg(liItemRef));
 
-///////////////////////////////////////////////////////
-
-// console.log(liItemRef)
+//////////////////////////////////////////////////////////////////////
 
 liItemRef.forEach(item => {
     const titleRef = item.querySelector('h2').textContent;

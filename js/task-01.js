@@ -3,7 +3,7 @@ const mainListRef = document.querySelector('#categories');
 
 const liItemRef = mainListRef.querySelectorAll('li.item');
 
-//работает до цифры '20' включительно ;)
+//корректно работает до цифры '20' включительно ;)
 const msg = arg => {
     if (arg.length === 1) {
         return `В списке 1 категория.`;
@@ -20,7 +20,7 @@ console.log(msg(liItemRef));
 
 ///////////////////////////////////////////////////////
 
-console.log(liItemRef)
+// console.log(liItemRef)
 
 liItemRef.forEach(item => {
     const titleRef = item.querySelector('h2').textContent;

@@ -15,7 +15,7 @@ const images = [
 
 const imgAdd = arr => arr.map(({ url, alt }) => {
   return `<li>
-              <img src=${url} alt=${alt} width='320px'>
+              <img src=${url} alt=${alt} width='640px'>
           </li>`;
 }).join('');
 

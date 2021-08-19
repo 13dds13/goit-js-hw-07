@@ -9,7 +9,6 @@ let counterValue = 0;
 // decrement
 
 refs.dec.addEventListener('click', () => {
-    console.log('в скрипте есть вариант с работой счётчика только в положительном диапазоне');
 
     counterValue -= 1;
     refs.value.textContent = counterValue;
@@ -26,8 +25,7 @@ refs.dec.addEventListener('click', () => {
 // increment
 
 refs.inc.addEventListener('click', () => {
-    console.log('в скрипте есть вариант с работой счётчика только в положительном диапазоне');
-
+    
     counterValue += 1;
     refs.value.textContent = counterValue;
 });

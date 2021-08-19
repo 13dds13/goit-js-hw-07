@@ -19,4 +19,11 @@ const imgAdd = arr => arr.map(({ url, alt }) => {
           </li>`;
 }).join('');
 
-document.querySelector('#gallery').insertAdjacentHTML('beforeend', imgAdd(images));
+const galleryEl = document.querySelector('#gallery');
+
+galleryEl.insertAdjacentHTML('beforeend', imgAdd(images));
+
+galleryEl.style.display = 'flex';
+galleryEl.style.justifyContent = 'space-around';
+galleryEl.style.alignItems = 'center';
+galleryEl.style.listStyle = 'none';

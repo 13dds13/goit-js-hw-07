@@ -8,14 +8,14 @@ const refs = {
 let userValue;
 let divSizes = 30;
 
-const randomColor = () => {
-    
+const rgbRandomValue = () => {
+    const value = Math.round(Math.random() / 4 * 1000);
+    return value;
 };
 
 const onUserInput = e => {
     userValue = Number(e.target.value);
 };
-
 
 const onUserClickCreate = () => {
     const divArr = [];
@@ -24,7 +24,7 @@ const onUserClickCreate = () => {
         const newDiv = document.createElement('div');
         newDiv.style.width = `${divSizes}px`;
         newDiv.style.height = `${divSizes}px`;
-        newDiv.style.background = `green`;
+        newDiv.style.background = `rgb(${rgbRandomValue()}, ${rgbRandomValue()}, ${rgbRandomValue()})`;
 
         divArr.push(newDiv);
         divSizes += 10;

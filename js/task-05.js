@@ -4,13 +4,13 @@ const refs = {
 };
 
 refs.input.addEventListener('input', (eve) => {
-    const userInput = eve.currentTarget.value;
+    const usersInput = eve.currentTarget.value;
 
-    if (userInput) {
-        refs.output.textContent = userInput;
-    };
+    if (usersInput) {
+        refs.output.textContent = usersInput;
+    }
 
-    if (!userInput) {
+    if (!usersInput) {
         refs.output.textContent = 'незнакомец';
-    };
+    }
 });

@@ -13,4 +13,5 @@ const ingredientsAdd = arr => arr.map(item => {
   return newLi;
 });
 
-document.querySelector('#ingredients').append(...ingredientsAdd(ingredients));
+const ingredientsListEl = document.querySelector('#ingredients');
+ingredientsListEl.append(...ingredientsAdd(ingredients));

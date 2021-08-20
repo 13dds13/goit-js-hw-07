@@ -1,17 +1,18 @@
 const input = document.querySelector('#validation-input');
-const lengthValue = input.getAttribute('data-length');
 
-input.addEventListener('blur', (eve) => {
+const onUserInput = evt => {
     
-    const usersInput = eve.currentTarget.value;
-    
-    if (usersInput.length < lengthValue) {
-        input.classList.remove('valid');
-        input.classList.add('invalid');
-    };
-    
-    if (usersInput.length >= lengthValue) {
-        input.classList.remove('invalid');
-        input.classList.add('valid');
-    };
-});
+    const usersInput = evt.currentTarget.value;
+    const lengthValue = Number(evt.currentTarget.dataset.length);
+
+    usersInput.length === lengthValue ?
+        addRemoveClass('valid', 'invalid') :
+        addRemoveClass('invalid', 'valid');
+    }
+
+const addRemoveClass = (add, remove) => {
+    input.classList.add(add);
+    input.classList.remove(remove);
+}
+
+input.addEventListener('blur', onUserInput);
